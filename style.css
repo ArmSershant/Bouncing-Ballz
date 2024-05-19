@@ -1,0 +1,141 @@
+:root {
+   --color2: linear-gradient(-45deg,
+         rgba(59, 173, 227, 1) 0%,
+         rgba(87, 111, 230, 1) 25%,
+         rgba(152, 68, 183, 1) 50%,
+         rgba(255, 53, 127, 1) 100%);
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   border: none;
+   align-items: center;
+   text-align: center;
+   font-family: din-round, sans-serif;
+   user-select: none;
+}
+
+h1 {
+   animation: rainbow 5s infinite;
+}
+
+span {
+   color: #d2ff09;
+   text-shadow: #000000;
+   border-radius: 10px;
+   padding: 3px;
+   background-color: rgba(87, 111, 230, 1);
+}
+
+#canvas {
+   box-shadow: 10px 10px 30px 10px #4e4a77;
+   background-image: var(--color2);
+   display: flex;
+   margin: auto;
+}
+
+#restartButton {
+   appearance: button;
+   background-color: #1899D6;
+   border: solid transparent;
+   border-radius: 16px;
+   border-width: 0 0 4px;
+   box-sizing: border-box;
+   color: #FFFFFF;
+   cursor: pointer;
+   display: inline-block;
+   font-size: 15px;
+   font-weight: 700;
+   letter-spacing: .8px;
+   line-height: 20px;
+   margin: 0;
+   outline: none;
+   overflow: visible;
+   padding: 13px 16px;
+   text-align: center;
+   text-transform: uppercase;
+   touch-action: manipulation;
+   transform: translateZ(0);
+   transition: filter .2s;
+   user-select: none;
+   -webkit-user-select: none;
+   vertical-align: middle;
+   white-space: nowrap;
+   width: 10rem;
+   transition: all ease-in-out 0.5s;
+}
+
+#restartButton:after {
+   background-clip: padding-box;
+   background-color: #1CB0F6;
+   border: solid transparent;
+   border-radius: 16px;
+   border-width: 0 0 4px;
+   bottom: -4px;
+   content: "";
+   left: 0;
+   position: absolute;
+   right: 0;
+   top: 0;
+   z-index: -1;
+}
+
+#restartButton:main,
+#restartButton:focus {
+   user-select: auto;
+}
+
+#restartButton:hover:not(:disabled) {
+   filter: brightness(1.1);
+   -webkit-filter: brightness(1.1);
+}
+
+#restartButton:disabled {
+   cursor: not-allowed;
+   background-color: rgba(128, 128, 128, 0.295);
+   color: rgba(211, 211, 211, 0.575);
+}
+
+#restartButton:active {
+   border-width: 4px 0 0;
+   background: none;
+}
+
+
+@keyframes rainbow {
+   0% {
+      color: red;
+   }
+
+   16.67% {
+      color: orange;
+   }
+
+   33.33% {
+      color: yellow;
+   }
+
+   50% {
+      color: green;
+   }
+
+   66.67% {
+      color: blue;
+   }
+
+   83.33% {
+      color: indigo;
+   }
+
+   100% {
+      color: violet;
+   }
+}
+
+@keyframes slidebg {
+   to {
+      background-position: 15vw;
+   }
+}
